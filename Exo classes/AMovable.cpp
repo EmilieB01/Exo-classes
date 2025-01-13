@@ -1,9 +1,11 @@
 #include "AMovable.h"
 
+
 AMovable::AMovable(float x, float y, float speed) : vect(x, y)
 {
 	mSpeed = speed;
 }
+
 
 void AMovable::SetDirection(float x, float y)
 {
@@ -23,4 +25,9 @@ float AMovable::GetDirX()
 float AMovable::GetDirY()
 {
 	return vect.GetPosY();
+}
+
+float AMovable::GetSpeed()
+{
+	return mSpeed;
 }

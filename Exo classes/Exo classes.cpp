@@ -15,6 +15,24 @@ int main()
     Mob mob(20, 20, 50, 1, 1);
     Player player(15, 15, 100, 4, 2);
 
+    stObject.SetPos(1, 2);
+    stObject.GetPos();
+
+    brObject.GetHealth();
+    brObject.GetMaxHealth();    
+    brObject.TakeDamage(10);
+    brObject.GetHealth();
+
+    mob.GetPos();
+    mob.GetDirX();
+    mob.GetDirY();
+    mob.SetDirection(1, 2);
+    mob.GetDirX();
+    mob.GetDirY();
+    mob.Move();
+    mob.GetPos();
+
+
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

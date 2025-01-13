@@ -1,10 +1,23 @@
 #include "Vector2.h"
+#include <cmath>
+
+void normalize(float& x, float& y)
+{
+	float magnitude = std::sqrt(x * x + y * y);
+	if (magnitude > 0)
+	{
+		x /= magnitude;
+		y /= magnitude;
+	}
+}
 
 Vector2::Vector2(float posX, float posY)
 {
+	normalize(posX, posY);
 	mPosX = posX;
 	mPosY = posY;
 }
+
 
 float Vector2::GetPosX()
 {

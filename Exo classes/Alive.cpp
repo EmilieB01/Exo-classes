@@ -19,4 +19,7 @@ float Alive::GetHealth()
 void Alive::TakeDamage(float damage)
 {
 	mHealth -= damage;
+
+	if (mHealth < 0)
+		mHealth = 0;
 }

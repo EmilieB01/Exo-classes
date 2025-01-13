@@ -3,11 +3,12 @@
 
 BreakableObject::BreakableObject(float x, float y, float maxHealth) : Entity(x, y), Alive(maxHealth)
 {
-	std::cout << "Static Object just created at x = " << x << " and y = " << y << "with "<< maxHealth << "life" << std::endl;
+	std::cout << "Breakable Object just created at x = " << x << " and y = " << y << " with "<< maxHealth << " life" << std::endl;
 }
 
 void BreakableObject::TakeDamage(float damage)
 {
 	Alive::TakeDamage(damage);
-	std::cout << "Breakable Object jsut broke" << std::endl;
+	if (Alive::GetHealth() == 0)
+		std::cout << "Breakable Object just broke" << std::endl;
 }	
