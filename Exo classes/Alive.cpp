@@ -1,0 +1,22 @@
+#include "Alive.h"
+
+Alive::Alive(float maxHealth)
+{
+	mHealth = maxHealth;
+	mMaxHealth = maxHealth;
+}
+
+float Alive::GetMaxHealth()
+{
+	return mMaxHealth;
+}
+
+float Alive::GetHealth()
+{
+	return mHealth;
+}
+
+void Alive::TakeDamage(float damage)
+{
+	mHealth -= damage;
+}
