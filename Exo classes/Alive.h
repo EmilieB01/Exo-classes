@@ -10,5 +10,6 @@ public :
 	virtual float GetMaxHealth();
 	virtual float GetHealth();
 	virtual void TakeDamage(float damage);
+	virtual bool IsAlive();
 };
 

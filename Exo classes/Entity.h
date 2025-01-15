@@ -12,6 +12,7 @@ public:
 	virtual float GetPosX();
 	virtual float GetPosY();
 	virtual void SetPos(float xPos, float yPos);
+	virtual float DistanceTo(Entity* other);
 };
 
 	

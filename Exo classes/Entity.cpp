@@ -1,4 +1,5 @@
 #include "Entity.h"
+#include <cmath>
 
 Entity::Entity(float x, float y) : mPos(x, y)
 {
@@ -22,4 +23,11 @@ float Entity::GetPosY()
 void Entity::SetPos(float x, float y)
 {
 	mPos.SetPosXY(x, y);
+}
+
+float Entity::DistanceTo(Entity* other)
+{
+    float dx = mPos.GetPosX() - other->mPos.GetPosX();
+    float dy = mPos.GetPosY() - other->mPos.GetPosY();
+    return std::sqrt(dx * dx + dy * dy);
 }

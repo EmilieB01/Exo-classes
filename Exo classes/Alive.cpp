@@ -23,3 +23,11 @@ void Alive::TakeDamage(float damage)
 	if (mHealth < 0)
 		mHealth = 0;
 }
+
+bool Alive::IsAlive()
+{
+	if (mHealth == 0)
+		return false;
+	else
+		return true;
+}

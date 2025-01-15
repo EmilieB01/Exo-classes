@@ -7,32 +7,17 @@
 #include "Mob.h"
 #include "Player.h"
 #include <iostream>
+#include "World.h"
 
 int main()
 {
-    StaticObject stObject(0,0);
-    BreakableObject brObject(10, 10, 20);
-    Mob mob(20, 20, 50, 1, 1);
-    Player player(15, 15, 100, 4, 2);
+	World world;
 
-    stObject.SetPos(1, 2);
-    stObject.GetPos();
-
-    brObject.GetHealth();
-    brObject.GetMaxHealth();    
-    brObject.TakeDamage(10);
-    brObject.GetHealth();
-
-    mob.GetPos();
-    mob.GetDirX();
-    mob.GetDirY();
-    mob.SetDirection(1, 2);
-    mob.GetDirX();
-    mob.GetDirY();
-    mob.Move();
-    mob.GetPos();
-
-
+	world.Init();
+	world.Step();
+	world.Step();
+	world.Step();
+	world.Step();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

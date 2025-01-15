@@ -25,5 +25,4 @@ void Player ::Move()
 void Player::Attack(Alive* alive)
 {
 	alive->TakeDamage(10);
-	std::cout << "Player just attacked" << std::endl;
 }

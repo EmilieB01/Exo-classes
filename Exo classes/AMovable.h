@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2.h"
+#include "Entity.h"
 
 class AMovable
 {
@@ -16,6 +17,7 @@ public:
 	virtual void SetSpeed(float speed);
 	virtual void Move() = 0;
 
+	void MoveTowards(Entity* target);
 
 };
 
